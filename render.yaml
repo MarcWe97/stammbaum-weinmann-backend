@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: stammbaum-weinmann-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: BASE_URL
+        value: https://stammbaum-weinmann-backend.onrender.com
